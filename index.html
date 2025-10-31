@@ -79,5 +79,26 @@
         <footer>
         <p>Site criado por <a href="https://github.com/AdrianoAbreuGith?tab=repositories" target="_blank">Adriano Abreu</a> ☠️</p>
         </footer>
+
+ <script>
+    // 1. Seleciona o elemento NAV
+    const navBar = document.querySelector('nav');
+
+    // 2. Seleciona TODOS os links (<a>) que estão DENTRO da tag <nav>
+    const linksDaNav = navBar.querySelectorAll('a');
+
+    // 3. Itera (percorre) cada link
+    linksDaNav.forEach(link => {
+        // 4. Adiciona um "Ouvinte de Eventos" para o evento 'click'
+        link.addEventListener('click', function(event) {
+            
+            // Previne que o link navegue para a página
+            event.preventDefault(); 
+            
+            // Exibe a caixa de alerta com a mensagem fixa solicitada
+            window.alert('Conteúdo ainda não disponível!');
+        });
+    });
+</script>       
 </body>
 </html>
